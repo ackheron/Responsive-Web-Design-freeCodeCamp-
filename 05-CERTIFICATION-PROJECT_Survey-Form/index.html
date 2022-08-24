@@ -11,25 +11,26 @@
 </head>
 
 <body>
-    <h1 id="title">ClasseCodeur Formulaire d'enquête</h1>
+    <div class="title">
+        <h1 id="title">ClasseCodeur Formulaire d'enquête</h1>
+        <p id="description">Merci d'avoir pris le temps de nous aider à améliorer la plateforme</p>
+    </div>
 
-    <p id="description">Merci d'avoir pris le temps de nous aider à améliorer la plateforme</p>
-
-    <form action="https://register-demo.freecodecamp.org" id="survey-form">
+    <form action="" id="survey-form">
         <fieldset>
 
-            <label for="name" id="name-label">Name
+            <label for="name" id="name-label" class="label-color">Nom
                 <input name="name" id="name" type="text" required placeholder="Entrez votre nom" />
             </label>
-            <label for="email" id="email-label">Email
+            <label for="email" id="email-label" class="label-color">Email
                 <input name="email" id="email" type="email" required placeholder="Entrez votre adresse mail" />
             </label>
-            <label for="age" id="number-label">Age (optionnel)
-                <input name="age" id="age" type="number" min="12" max="120" />
+            <label for="number" id="number-label" class="label-color">Age <span>(optionnel)</span>
+                <input name="age" id="number" type="number" min="12" max="120" placeholder="Entrez votre age" />
             </label>
-            <label>Quelle option décrit le mieux votre rôle actuel ?
-                <select id="dropdown">
-                    <option value="">Sélectionnez votre situation actuelle</option>
+            <label class="label-color">Quelle option décrit le mieux votre rôle actuel ?
+                <select id="dropdown" required>
+                    <option disabled value="" selected>Sélectionnez votre situation actuelle</option>
                     <option value="1">Étudiant</option>
                     <option value="2">Travail à plein temps</option>
                     <option value="3">Apprentissage</option>
@@ -41,25 +42,34 @@
         </fieldset>
         <fieldset>
             <p>Quelle est votre fonctionnalité préférée de ClasseCodeur ?</p>
-            <label for="rad1"><input type="radio" name="user-recommend" id="rad1" />Certainement</label>
-            <label for="rad2"><input type="radio" name="user-recommend" id="rad2" />Peut-être</label>
-            <label for="rad3"><input type="radio" name="user-recommend" id="rad3" />Pas sûr</label>
+            <label for="rad1"><input type="radio" name="user-recommend" id="rad1" value="definitely"
+                    class="radio-input" />Certainement</label>
+            <label for="rad2"><input type="radio" name="user-recommend" id="rad2" value="maybe"
+                    class="radio-input" />Peut-être</label>
+            <label for="rad3"><input type="radio" name="user-recommend" id="rad3" value="not-sure"
+                    class="radio-input" />Pas sûr</label>
 
-            <p>Que souhaiteriez-vous voir amélioré ? (Choix multiples)</p>
-            <label for="chk1"><input type="checkbox" name="user-improved" id="chk1" value="front-end" />Projets
+            <p>Que souhaiteriez-vous voir amélioré ? <span>(Choix multiples)</span></p>
+            <label for="chk1"><input type="checkbox" name="user-improved" id="chk1" value="front-end"
+                    class="check-input" />Projets
                 Front-end</label>
-            <label for="chk2"><input type="checkbox" name="user-improved" id="chk2" value="back-end" />Projets
+            <label for="chk2"><input type="checkbox" name="user-improved" id="chk2" value="back-end"
+                    class="check-input" />Projets
                 Back-end</label>
-            <label for="chk3"><input type="checkbox" name="user-improved" id="chk3"
-                    value="challenges" />Challenges</label>
-            <label for="chk4"><input type="checkbox" name="user-improved" id="chk4" value="vidéos" />Vidéos</label>
-            <label for="chk5"><input type="checkbox" name="user-improved" id="chk5" value="wiki" />Wiki</label>
-            <label for="chk6"><input type="checkbox" name="user-improved" id="chk6" value="forum" />Forum</label>
-            <label for="chk7"><input type="checkbox" name="user-improved" id="chk7" value="open-source" />Open
+            <label for="chk3"><input type="checkbox" name="user-improved" id="chk3" value="challenges"
+                    class="check-input" />Challenges</label>
+            <label for="chk4"><input type="checkbox" name="user-improved" id="chk4" value="vidéos"
+                    class="check-input" />Vidéos</label>
+            <label for="chk5"><input type="checkbox" name="user-improved" id="chk5" value="wiki"
+                    class="check-input" />Wiki</label>
+            <label for="chk6"><input type="checkbox" name="user-improved" id="chk6" value="forum"
+                    class="check-input" />Forum</label>
+            <label for="chk7"><input type="checkbox" name="user-improved" id="chk7" value="open-source"
+                    class="check-input" />Open
                 Source</label>
 
             <p>Des commentaires ou des suggestions?</p>
-            <textarea name="comments" id="comments" cols="30" rows="10"
+            <textarea class="textarea-input" name="comments" id="comments" cols="30" rows="10"
                 placeholder="Entrez votre commentaire ici..."></textarea>
         </fieldset>
         <input type="submit" value="Envoyer" id="submit" />
